@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Information</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='player info.css') }}">
+</head>
+
+<body>
+    <div class="info-box" style="background-image: url('https://wallpapercave.com/wp/wp8994026.jpg');">
+        <div class="info-item">
+            <img src="{{ url_for('static', filename='images/ipl-logo-new-old.png') }}" alt="Delhi Capitals Logo">
+        </div>
+        <div class="info-item">
+
+            <p></p>
+        </div>
+        <body>
+            <div id="playerInfo" class ="player">
+                {% for team, players in data.items() %}
+                    <h2 >{{ team }}</h2>
+                    <ul>
+                        {% for player in players %}
+                            <p >{{ player.Name }}</p>
+                    
+                        {% endfor %}
+                    </ul>
+                {% endfor %}
+            </div>
+        </body>
+        
+        <div class="info-item">
+            <div id="playerInfo"></div>
+            
+            <button class="btn" onclick="redirectTocskhtml()">Back to page</button>
+        </div>
+    </div>
+    <script>
+        function redirectTocskhtml() {
+    window.location.href = "/"; // Replace "index.html" with the path to your home page
+}
+        document.addEventListener("DOMContentLoaded", function() {
+    const playerInfoDiv = document.getElementById("playerInfo");
+
+    // Fetch player data from Flask view
+    fetch("/players")
+        .then(response => response.json())
+        .then(data => {
+            // Loop through teams in the JSON data
+            Object.keys(data).forEach(team => {
+                const players = data[team];
+                // Loop through players in each team
+                players.forEach(player => {
+                    // Create a div element for each player's name
+                    const playerDiv = document.createElement("div");
+                    playerDiv.textContent = player.Name;
+                    playerInfoDiv.appendChild(playerDiv);
+                });
+            });
+        })
+        .catch(error => console.error("Error fetching player data:", error));
+});
+
+    </script>
+</body>
+
+</html>

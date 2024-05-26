@@ -1,0 +1,99 @@
+
+/* body */
+
+body {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+   
+    /* margin-top: 30px; */
+    font-family: Arial, sans-serif;
+    background-color: #cdb5b5;
+    background: url(/images/cricket.img.jfif) no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+.player {
+   background-color: rgba(99, 125, 173, 0.674); /* Set background color with opacity */
+   padding: 10px; /* Add padding for spacing */
+   margin-bottom: 5px;
+   font-family: Oswald, sans-serif; /* Use Oswald font */
+    font-weight: bold; /* Make the font bold */
+    font-stretch: expanded; /* Add margin between players */
+   border-radius: 5px;
+   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; /* Round corners */
+   color: #fff; /* Set text color to white */
+}
+
+ 
+    .info-box {
+      width: 600px;
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      border-radius: 10px;
+      font-family: 'Poppins', sans-serif;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin: 50px auto;
+      text-align: center;
+  }
+  
+  .info-item {
+      margin-bottom: 20px;
+  }
+  
+  .info-item img {
+      max-width: 100%;
+  }
+  
+  .btn {
+      background-color: yellow;
+      border: 2px solid black;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      color: black;
+      margin: 0 10px;
+      cursor: pointer;
+  }
+  
+  .btn:hover {
+      background-color: #ffd700;
+  }
+  
+ .info-item {
+    margin-bottom: 20px;
+    margin-top: 5px;
+ }
+ 
+ .info-item img {
+    max-width: 100px;
+    max-height: 100px;
+    margin-bottom: 10px;
+ }
+ .btn {
+    position: relative;
+    display: inline-block;
+    margin: 5px;
+    padding: 7px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    color: rgb(253, 253, 253);
+    overflow: hidden;
+    filter: hue-rotate(340deg);
+    transition: all 0.5s ease;
+    background-color: darkslategray;
+  }
+  
+  .btn:hover {
+    color: #040404;
+    background: rgb(152, 219, 219);
+    
+  }
